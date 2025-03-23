@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة تقشير البندورة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: auto;
+            border: 2px solid #000;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+        .tomato {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            top: 150px;
+            left: 150px;
+            cursor: pointer;
+        }
+        .peeled {
+            background-color: #d3d3d3;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>لعبة تقشير البندورة</h1>
+    <div class="container">
+        <div id="tomato" class="tomato"></div>
+    </div>
+    <div class="message" id="message">حاول تقشير البندورة!</div>
+
+    <script>
+        const tomato = document.getElementById('tomato');
+        const message = document.getElementById('message');
+
+        tomato.addEventListener('click', function() {
+            tomato.classList.add('peeled');
+            message.textContent = 'تم تقشير البندورة! ممتاز!';
+        });
+    </script>
+
+</body>
+</html>
